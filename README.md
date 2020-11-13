@@ -99,6 +99,10 @@ python prepro.py
 ```bash
 python train.py
 ```
+* **predicting test samples in batches**:
+```bash
+python predict.py
+```
 
 <br>
 
