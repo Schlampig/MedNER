@@ -14,20 +14,25 @@ bert_codes -> __init__.py
             | optimization.py
             | tokenization.py
             | utils.py
+            
 check_points -> your_trained_model_name -> best_model.pth (your trained bert model)
                                          | log.txt (show results of each epoch)
                                          | log_dev.txt (show detailed results of each batch)
                                          | setting.txt (show hyper-parameters configuration)
+
 datasets -> your_train_data.json
           | your_dev_data.json
           | your_test_data.json
           | your_train_features.json (generated from your_train_data.json)
           | your_dev_features.json (generated from your_dev_data.json)
           | your_test_features.json (generated from your_test_data.json)
+
 pretrained_models -> bert_chinese -> bert_config.json
                                    | pytorch_model.pth
                                    | vocab.txt
+
 prepro.py (create your train/dev/test datasets from the original one)
+
 train.py (train/dev/save your model)
 ```
 
@@ -36,7 +41,7 @@ train.py (train/dev/save your model)
 ## Dataset
 * **original corpora**: The original corpora used here are from [Chinese_medical_NLP](https://github.com/lrs1353281004/Chinese_medical_NLP). <br>
 
-* **raw corpus**: Then, some of the original corpora are selected and cleaned. Please run prepro.py to further generate the train/dev/test data from the raw corpus. The raw corpus could be download from [here](https://pan.baidu.com/s/1_n8OczxavRmJNdXDxLgBkg) with code=xyt1. Maybe you should change the path when runing prepro.py :)<br>
+* **raw corpus**: Then, some of the original corpora are selected and cleaned. Please run [prepro.py](https://github.com/Schlampig/MedNER/blob/main/prepro.py) to further generate the train/dev/test data from the raw corpus. The raw corpus could be download from [here](https://pan.baidu.com/s/1_n8OczxavRmJNdXDxLgBkg) with code=xyt1. Maybe you should change the path when running the script :)<br>
 
 * **train/dev/test data**: Sample with the following format is suitable for MedNER (you can construct your own datasets):
 ```
