@@ -57,6 +57,10 @@ print('***** Loading Model *****')
 model = torch.load(args.checkpoint_dir + "/best_model.pth")
 model.to(device)
 
+# initialize predict file
+if os.path.exists(args.predict_file):
+  os.remove(args.predict_file)
+
 print("Configuration Time: {}".format(time() - t_config))
 
 
@@ -82,7 +86,7 @@ def print_and_save_batch_dict(input_id, d_true, d_pred):
     lst_token = tokenizer.convert_ids_to_tokens(input_id.cpu().numpy())
     lst_token = [t.replace("##", "") if t.startswith("##") else t for t in lst_token]
     s_token = "".join(lst_token).replace("[PAD]", "").replace("[CLS]", "").replace("[SEP]", "")
-    with open(args.predict_file, 'w') as aw_dev:
+    with open(args.predict_file, 'a') as aw_dev:
         aw_dev.write("Sent: {} \n".format(s_token))
     s_true, s_pred = "", ""
     for k, lst_v in d_true.items():
@@ -99,7 +103,7 @@ def print_and_save_batch_dict(input_id, d_true, d_pred):
                 lst_m = m.split("_")
                 idx_s, idx_e = int(lst_m[0]), int(lst_m[1])
                 s_pred = s_pred + "".join(lst_token[idx_s:idx_e]) + "(" + lst_m[0] + ", " + lst_m[1] + "); "
-    with open(args.predict_file, 'w') as f:
+    with open(args.predict_file, 'a') as f:
         f.write("True: {} \n".format(s_true))
         f.write("Pred: {} \n".format(s_pred))
         f.write("\n")
@@ -136,13 +140,13 @@ def predict():
                 d_res[k]["precision"].append(v["precision"])
                 d_res[k]["recall"].append(v["recall"])
                 d_res[k]["f1"].append(v["f1"])
-            with open(args.predict_file, 'w') as f:
+            with open(args.predict_file, 'a') as f:
                 f.write("Result of batch {} is: \n {} \n".format(step, res_batch))
                 f.write(" ---------------------------------------------------- \n")
             print("Result of batch {} is: \n {} \n ".format(step, res_batch))
         # get final scores
         f1 = np.mean([np.mean(v["f1"]) for k, v in d_res.items()])
-        with open(args.predict_file, 'w') as f:
+        with open(args.predict_file, 'a') as f:
             f.write("F1 of all batches is: {:.4f} \n".format(f1))
             f.write(" ---------------------------------------------------- \n")
         print("F1 of all batches is: {:.4f} \n".format(f1))
