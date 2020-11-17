@@ -287,7 +287,7 @@ def statistic_info(data_now=None):
     return size_sample, size_entity, d_type, avg_text_len
 
 
-def unify_data(data_now=None, save_path="ner_all_new.json"):
+def prettify_data(data_now=None, save_path="ner_all_new.json"):
     print("******************** Prettify the combined dataset ******************** ")
     # load file
     if isinstance(data_now, str) and data_now.endswith(".json"):
@@ -447,7 +447,7 @@ if __name__ == "__main__":
     # lst = combine_dict()
     # size_sample, size_entity, d_type, avg_text_len = statistic_info(data_now="datasets/ner_all.json")
 
-    # lst, dict_entity = unify_data(data_now="datasets/ner_all.json")
+    # lst, dict_entity = prettify_data(data_now="datasets/ner_all.json")
     # remove_one_token(data_now="datasets/ner_all.json")
     
     # get_tiny_data(data_now="datasets/ner_all.json")
