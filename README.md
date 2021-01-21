@@ -116,6 +116,7 @@ python predict.py
 
 ## References
 * **code**: the original BERT-related codes are from [bert_cn_finetune](https://github.com/ewrfcas/bert_cn_finetune) project of [ewrfcas](https://github.com/ewrfcas) and [transformers](https://github.com/huggingface/transformers) project of [Hugging Face](https://github.com/huggingface). <br>
+* **collection**: [awesome_Chinese_medical_NLP](https://github.com/GanjinZero/awesome_Chinese_medical_NLP)
 
 <br>
 
