@@ -118,12 +118,6 @@ python predict.py
 
 <br>
 
-## References
-* **code**: the original BERT-related codes are from [bert_cn_finetune](https://github.com/ewrfcas/bert_cn_finetune) project of [ewrfcas](https://github.com/ewrfcas) and [transformers](https://github.com/huggingface/transformers) project of [Hugging Face](https://github.com/huggingface). <br>
-* **collection**: [awesome_Chinese_medical_NLP](https://github.com/GanjinZero/awesome_Chinese_medical_NLP)
-
-<br>
-
 ## Examples of Results
 * **format**:
 ```
@@ -193,6 +187,12 @@ Sent: 因此对常规检查不能确诊的患者可采用rflp，达到早期诊�
 True: >检查: 常规检查(4, 8); rf(18, 19); lp(19, 20); 诊断(25, 27); >其他: 早期(23, 25);  
 Pred: >检查: 常规检查(4, 8); rf(18, 19); lp(19, 20); 诊断(25, 27); >其他: 早期(23, 25);  
 ```
+
+<br>
+
+## References
+* **code**: the original BERT-related codes are from [bert_cn_finetune](https://github.com/ewrfcas/bert_cn_finetune) project of [ewrfcas](https://github.com/ewrfcas) and [transformers](https://github.com/huggingface/transformers) project of [Hugging Face](https://github.com/huggingface). <br>
+* **collection**: [awesome_Chinese_medical_NLP](https://github.com/GanjinZero/awesome_Chinese_medical_NLP) / [Medical-Names-Corpus](https://github.com/wainshine/Medical-Names-Corpus)
 
 <br>
 
