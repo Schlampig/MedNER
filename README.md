@@ -192,7 +192,7 @@ Pred: >检查: 常规检查(4, 8); rf(18, 19); lp(19, 20); 诊断(25, 27); >其�
 
 ## References
 * **code**: the original BERT-related codes are from [bert_cn_finetune](https://github.com/ewrfcas/bert_cn_finetune) project of [ewrfcas](https://github.com/ewrfcas) and [transformers](https://github.com/huggingface/transformers) project of [Hugging Face](https://github.com/huggingface). <br>
-* **collection**: [awesome_Chinese_medical_NLP](https://github.com/GanjinZero/awesome_Chinese_medical_NLP) / [Medical-Names-Corpus](https://github.com/wainshine/Medical-Names-Corpus)
+* **extended learning**: [awesome_Chinese_medical_NLP](https://github.com/GanjinZero/awesome_Chinese_medical_NLP) / [Medical-Names-Corpus](https://github.com/wainshine/Medical-Names-Corpus) / [CBLUE](https://github.com/CBLUEbenchmark/CBLUE)
 
 <br>
 
