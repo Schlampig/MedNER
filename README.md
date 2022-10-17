@@ -197,6 +197,7 @@ Pred: >检查: 常规检查(4, 8); rf(18, 19); lp(19, 20); 诊断(25, 27); >其�
   - [Medical-Names-Corpus](https://github.com/wainshine/Medical-Names-Corpus)
   - [CBLUE](https://github.com/CBLUEbenchmark/CBLUE)
   - [TCM-NER](http://openkg.cn/dataset/tcm-ner): [开源开放 | 中药说明书实体识别数据集TCM-NER](https://mp.weixin.qq.com/s/VL3mtIZk7Rg5Mjds-Xh6bQ)
+  - [医疗文本结构化：一种新视角](https://mp.weixin.qq.com/s/XN6AlHPumyRbR1OzCUYouQ)
 
 <br>
 
